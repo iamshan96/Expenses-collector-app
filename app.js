@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 const expensesContainer = document.getElementById("expenses-container");
-const inputBtn = document.getElementById("input-btn");
 const inputTextBox = document.getElementById("input-text-box");
 const inputAmountBox = document.getElementById("input-amount-box");
 
@@ -14,6 +13,7 @@ const dataFromLocalStorage = JSON.parse(
 if (dataFromLocalStorage) {
   expensesListArray = dataFromLocalStorage;
   render();
+  clearExpensesContainer();
 }
 
 document.addEventListener("click", function (e) {
@@ -33,9 +33,7 @@ function removeItemClick(tweetId) {
   expensesListArray.splice(checkIndex, 1);
   localStorage.setItem("expensesListArray", JSON.stringify(expensesListArray));
   render();
-  if (expensesListArray.length === 0) {
-    expensesContainer.innerHTML = "";
-  }
+  clearExpensesContainer();
 }
 
 function inputBtnHandleClick() {
@@ -54,6 +52,12 @@ function inputBtnHandleClick() {
   }
   inputTextBox.value = "";
   inputAmountBox.value = "";
+}
+
+function clearExpensesContainer() {
+  if (expensesListArray.length === 0) {
+    expensesContainer.innerHTML = "";
+  }
 }
 
 function getExpensesHtml() {
