@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 380px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 2em 1em 3em 1em;
+}
+
+h1{
+    margin-bottom: 1em;
+}
+
+.user-input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+input,
+button {
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    border: 1px solid black;
+
+}
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.input-text-box,
+.input-amount-box,
+.input-btn {
+    width: 100%;
+    padding: 10px;
+}
+
+.expenses-list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.expenses-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remove-item {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.total-expenses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.list-item-left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+}
