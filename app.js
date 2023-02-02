@@ -11,7 +11,7 @@ const dataFromLocalStorage = JSON.parse(
   localStorage.getItem("expensesListArray")
 );
 
-if (dataFromLocalStorage.length > 0) {
+if (dataFromLocalStorage) {
   expensesListArray = dataFromLocalStorage;
   render();
 }
